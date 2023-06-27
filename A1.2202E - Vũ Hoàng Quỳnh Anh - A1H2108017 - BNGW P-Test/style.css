@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=M+PLUS+1:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  background: #201f1f;
+  font-family: "Roboto Mono";
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLeft img {
+  cursor: pointer;
+}
+
+.headerRight ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.headerRight ul li {
+  list-style-type: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.headerRight ul li p {
+  display: inline-block;
+  position: relative;
+}
+
+.headerRight ul li p:hover {
+  border-bottom: 1px solid #fff;
+  font-weight: 700;
+}
+
+span.eclipse {
+  position: absolute;
+  border-radius: 50%;
+}
+
+#item1 {
+  width: 162px;
+  height: 162px;
+  background: #ff3beb;
+  top: 327px;
+  left: 1276px;
+  filter: blur(129.6px);
+}
+
+#item2 {
+  width: 119px;
+  height: 119px;
+  top: 649px;
+  left: 153px;
+  filter: blur(60px);
+  background: #ff3beb;
+}
+
+#item3 {
+  width: 119px;
+  height: 119px;
+  filter: blur(60px);
+  background: #3b5cff;
+  top: 110px;
+  left: -97px;
+}
+
+#item4 {
+  width: 404.26px;
+  height: 107.42px;
+  background: radial;
+  top: 616.38px;
+  left: 758.82px;
+}
+
+.leftContent button {
+  background: #3b5cff;
+  padding: 16px 32px;
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.leftContent button:hover {
+  background: #1b50ad;
+  transition: ease-in-out 0.25s;
+}
+
+/* Split Text  */
+#text {
+  display: inline-block;
+  /* opacity: 0; */
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1s;
+}
+
+#text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1s;
+}
+
+.leftContent .title {
+  font-size: 68px;
+  text-align: left;
+  color: #fff;
+  width: 531px;
+}
+
+.leftContent .description {
+  margin-top: 50px;
+  font-size: 18px;
+  text-align: left;
+  color: #fff;
+  width: 462px;
+  color: #d9d9d9;
+  opacity: 0.7;
+}
+
+.rightContent lottie-player {
+  position: absolute;
+  top: 85px;
+  right: 9px;
+}
