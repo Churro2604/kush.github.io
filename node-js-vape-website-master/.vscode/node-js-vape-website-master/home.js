@@ -204,6 +204,7 @@ const running = async () => {
   const newProducts = await apiGetProducts({
     orderBy: "createdDate",
     orderDirection: "desc",
+    categoryId: 2098533,
   });
   console.log(products, "products");
   if (products) {

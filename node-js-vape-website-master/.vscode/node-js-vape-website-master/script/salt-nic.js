@@ -84,33 +84,38 @@ const apiGetProducts = (
 
 const renderProductItem = (item) => {
   console.log(item.images, "item.images");
-  return `<div class="item grid__item large--two-twelfths medium--one-third small--one-half">
-	<div class="product-item">
-	<div class="product-img">
-		<a href="/product?code=${item.code}">
-			<img id="1047133368" 
-      class='lazyload' 
-      width="112" 
-      height="130" 
-      data-src="${item.images?.[0] || "//product.hstatic.net/200000019872/product/mob_liquid_blitzstein_guava_menthol_salt_nic_e9d926943242491898781215f486bac0_medium.png"}" 
-      alt="Mob Liquid Blitzstein Guava Menthol Salt Nic (30ml)(Ổi Lạnh)">
-		</a>
-		<div class="product-tagshethang"></div>
-		<div class="product-tags"></div>
-	</div>
-	<div class="product-tagname">
-		<div>
-			<a href="collections/all/index_Mob%20Liquid.html">${item.categoryName}</a>
-		</div>
-	</div>
-	<div class="product-review-star text-center"></div>
-	<div class="product-title">
-		<a href="/product?code=${item.code}">${item.fullName}</a>
-	</div>
-	<div class="product-price clearfix">
-		<span class="current-price">${formatPrice(item.basePrice)}</span>
-	</div>
-	</div>
+  return `<div class="grid__item large--two-tenths medium--one-third small--one-third mg-bottom15 mb-mg-bottom0">
+  <div class="product-item">
+    <div class="product-img">
+      <a href="/product?code=${item.code}">
+        <img
+          id="1051484009"
+          class="lazyload"
+          width="112"
+          height="130"
+          data-src="${
+            item.images?.[0] ||
+            "//product.hstatic.net/200000019872/product/daddy_s_juice_no.5_salt_nic_997bc1556bf34df99765fb21e5311f5f_medium.png"
+          }"
+          alt="Switch by dot. Prefilled Pod Apple Tobacco"
+        />
+      </a>
+      <div class="product-tagshethang"></div>
+      <div class="product-tags"></div>
+    </div>
+    <div class="product-tagname">
+      <div>
+        ${item.categoryName}
+      </div>
+    </div>
+    <div class="product-review-star text-center"></div>
+    <div class="product-title">
+        <a href="/product?code=${item.code}">${item.fullName}</a>
+    </div>
+    <div class="product-price clearfix">
+        <span class="current-price">${formatPrice(item.basePrice)}</span>
+    </div>
+  </div>
 </div>`;
 };
 
@@ -161,14 +166,13 @@ const renderProductItem = (item) => {
 
 const renderProductItem2 = (item) => {
   console.log(item.images, "item.images");
-  return `<div
-  class="item grid__item large--two-twelfths medium--one-third small--one-third"
->
+  return `
+  <div class="grid__item large--two-tenths medium--one-third small--one-third mg-bottom15 mb-mg-bottom0">
   <div class="product-item">
     <div class="product-img">
       <a href="/product?code=${item.code}">
         <img
-          id="1052385155"
+          id="1051484009"
           class="lazyload"
           width="112"
           height="130"
@@ -176,7 +180,7 @@ const renderProductItem2 = (item) => {
             item.images?.[0] ||
             "//product.hstatic.net/200000019872/product/daddy_s_juice_no.5_salt_nic_997bc1556bf34df99765fb21e5311f5f_medium.png"
           }"
-          alt="Daddy's Juice No.5 Salt Nic (30ml)(Xoài dứa đào)"
+          alt="Switch by dot. Prefilled Pod Apple Tobacco"
         />
       </a>
       <div class="product-tagshethang"></div>
@@ -184,27 +188,78 @@ const renderProductItem2 = (item) => {
     </div>
     <div class="product-tagname">
       <div>
-        <a href="collections/all/index_Salt%20Nic.html"
-          >Salt Nic</a
-        >- <a href="collections/all/index_30ml.html">30ml</a>-
-        <a href="collections/all/index_Daddy%27s%20Juice.html"
-          >Daddy's Juice</a
-        >-
-        <a href="collections/all/index_Fruity.html">Fruity</a>-
-        <a href="collections/all/index_M%E1%BB%B9.html">Mỹ</a>-
+        <a href="/collections/all/index_dot.">dot.</a>-{" "}
+        <a href="/collections/all/index_Prefill Pod">Prefill Pod</a>-{" "}
+        <a href="/collections/all/index_Salt Nic">Salt Nic</a>-{" "}
+        <a href="/collections/all/index_Mỹ">Mỹ</a>-{" "}
+        <a href="/collections/all/index_Tobacco">Tobacco</a>-{" "}
       </div>
     </div>
     <div class="product-review-star text-center"></div>
     <div class="product-title">
-      <a href="/product?code=${item.code}">${item.fullName}</a>
+        <a href="/product?code=${item.code}">${item.fullName}</a>
     </div>
     <div class="product-price clearfix">
-      <span class="current-price">${formatPrice(item.basePrice)}</span>
+        <span class="current-price">${formatPrice(item.basePrice)}</span>
     </div>
   </div>
 </div>`;
 };
 
+{
+  /* <div class="grid__item large--two-tenths medium--one-third small--one-third mg-bottom15 mb-mg-bottom0">
+  <div class="product-item">
+    <div class="product-img">
+      <a href="/products/switch-by-dot-prefilled-pod-apple-tobacco">
+        <img
+          id="1051484009"
+          class="lazyload"
+          width="112"
+          height="130"
+          data-src="//product.hstatic.net/200000019872/product/switch_by_dot._prefilled_pod_apple_tobacco_c4ec0e8a44a94c2dadc05de7ceaac661_medium.png"
+          alt="Switch by dot. Prefilled Pod Apple Tobacco"
+        />
+      </a>
+      <div class="product-tagshethang"></div>
+      <div class="product-tags"></div>
+    </div>
+    <div class="product-tagname">
+      <div>
+        <a href="/collections/all/index_dot.">dot.</a>-{" "}
+        <a href="/collections/all/index_Prefill Pod">Prefill Pod</a>-{" "}
+        <a href="/collections/all/index_Salt Nic">Salt Nic</a>-{" "}
+        <a href="/collections/all/index_Mỹ">Mỹ</a>-{" "}
+        <a href="/collections/all/index_Tobacco">Tobacco</a>-{" "}
+      </div>
+    </div>
+    <div class="product-review-star text-center"></div>
+    <div class="product-title">
+      <a href="/products/switch-by-dot-prefilled-pod-apple-tobacco">
+        Switch by dot. Prefilled Pod Apple Tobacco
+      </a>
+    </div>
+    <div class="product-price clearfix">
+      <span class="current-price">65,000₫</span>
+    </div>
+  </div>
+</div>; */
+}
+
+const getPageProduct = async (page) => {
+  const products = await apiGetProducts({
+    orderBy: "createdDate",
+    orderDirection: "desc",
+    pageSize: 50,
+    categoryId: 2098533,
+    currentItem: page,
+  });
+  console.log(products, "products");
+  if (products) {
+    document.getElementById("id-product-list").innerHTML = products.data
+      .map((item) => renderProductItem(item))
+      .join("");
+  }
+};
 const running = async () => {
   authData = await localStorage.getItem("auth");
   if (!authData) {
@@ -215,36 +270,47 @@ const running = async () => {
 
   console.log("success...");
 
-  const products = await apiGetProducts();
-  // const newProducts = await apiGetProducts({
-  //   orderBy: "createdDate",
-  //   orderDirection: "desc",
-  // });
-  const thirdProducts = await apiGetProducts({
+  const products = await apiGetProducts({
     orderBy: "createdDate",
     orderDirection: "desc",
-    pageSize: 6,
+    pageSize: 50,
+    categoryId: 2098533,
   });
-  console.log(products, "products", thirdProducts);
+  console.log(products, "products", products);
   if (products) {
-    document.getElementById("home-news-product-list").innerHTML = products.data
+    document.getElementById("id-product-list").innerHTML = products.data
       .map((item) => renderProductItem(item))
       .join("");
-    document.getElementById("home-news-product-list2").innerHTML = products.data
-      .map((item) => renderProductItem2(item))
+    const totalPage = Math.ceil(products.total / products.pageSize);
+    document.getElementById("id-pagination").innerHTML = Array.from(
+      Array(totalPage).keys()
+    )
+      .map(
+        (i) => `
+      <span class="page">
+        <a id="id-page-click-${
+          i + 1
+        }" class="page-node page-span-click" style="cursor:pointer;${
+          i == 0 ? "color: #f48220;" : ""
+        }">${i + 1}</a>
+      </span>`
+      )
       .join("");
+
+    [...Array(totalPage).keys()].forEach((i) => {
+      document.getElementById(`id-page-click-${i + 1}`).onclick = () => {
+        [...document.getElementsByClassName("page-span-click")].forEach((i) => {
+          i.style.color = "#6b6b6b";
+        });
+        document.getElementById(`id-page-click-${i + 1}`).style.color =
+          "#f48220";
+        getPageProduct(i + 1);
+      };
+    });
+    // document.getElementById("home-news-product-list2").innerHTML = products.data
+    //   .map((item) => renderProductItem2(item))
+    //   .join("");
   }
-  if (thirdProducts) {
-    document.getElementById("home-third-product-list").innerHTML =
-      thirdProducts.data.map((item) => renderProductItem(item)).join("");
-    document.getElementById("home-third-product-list2").innerHTML =
-      thirdProducts.data.map((item) => renderProductItem2(item)).join("");
-  }
-  // if (newProducts) {
-  //   document.getElementById("id-product-list-new").innerHTML = newProducts.data
-  //     .map((item) => renderProductItem(item))
-  //     .join("");
-  // }
 
   console.log(authData, "authData");
 
