@@ -47,15 +47,14 @@ const getToken = () => {
 
 const apiGetProducts = (
   payload = {
-    orderBy: undefined,
-    orderDirection: undefined,
+    orderBy: "create_at",
+    orderDirection: "desc",
     format: "json",
     currentItem: 1,
     pageSize: 6,
     includeInventory: "True",
     isActive: true,
     includePricebook: true,
-    orderBy: "id",
     lastModifiedFrom: "2022-12-14",
     orderDirection: "desc",
   }
@@ -76,9 +75,19 @@ const apiGetProducts = (
         // mode: "no-cors",
       }
     )
-      .then((res) => res.json())
+      .then((res) => {
+        console.log(res, "res???");
+        if (res.status == 401) {
+          localStorage.clear();
+          window.location.reload();
+        }
+        return res.json();
+      })
       .then(resolve)
-      .catch(reject);
+      .catch((e) => {
+        console.log(e, "e");
+        reject(e);
+      });
   });
 };
 

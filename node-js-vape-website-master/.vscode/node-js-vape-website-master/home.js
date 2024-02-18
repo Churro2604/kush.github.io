@@ -52,7 +52,6 @@ const apiGetProducts = (
     includeInventory: "True",
     isActive: true,
     includePricebook: true,
-    orderBy: "id",
     lastModifiedFrom: "2022-12-14",
     orderDirection: "desc",
   }

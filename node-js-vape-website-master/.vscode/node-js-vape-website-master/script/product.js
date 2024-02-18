@@ -166,7 +166,13 @@ const getToken = () => {
       },
       body: details,
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status == 401) {
+          localStorage.clear();
+          window.location.reload();
+        }
+        return res.json();
+      })
       .then((res) => {
         localStorage.setItem("auth", JSON.stringify(res));
         resolve(res);
@@ -201,7 +207,7 @@ async function running() {
       // localStorage.setItem("auth", JSON.stringify(res));
       $("id-price").innerHTML = formatPrice(res.basePrice);
       $("id-name").innerHTML = res.fullName;
-      
+
       resolve(res);
     })
     .catch(reject);

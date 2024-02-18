@@ -47,15 +47,14 @@ const getToken = () => {
 
 const apiGetProducts = (
   payload = {
-    orderBy: undefined,
-    orderDirection: undefined,
+    orderBy: "createdDate",
+    orderDirection: "asc",
     format: "json",
     currentItem: 1,
     pageSize: 6,
     includeInventory: "True",
     isActive: true,
     includePricebook: true,
-    orderBy: "id",
     lastModifiedFrom: "2022-12-14",
     orderDirection: "desc",
   }
@@ -76,7 +75,13 @@ const apiGetProducts = (
         // mode: "no-cors",
       }
     )
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status == 401) {
+          localStorage.clear();
+          window.location.reload();
+        }
+        return res.json();
+      })
       .then(resolve)
       .catch(reject);
   });
@@ -92,7 +97,10 @@ const renderProductItem = (item) => {
       class='lazyload' 
       width="112" 
       height="130" 
-      data-src="${item.images?.[0] || "//product.hstatic.net/200000019872/product/mob_liquid_blitzstein_guava_menthol_salt_nic_e9d926943242491898781215f486bac0_medium.png"}" 
+      data-src="${
+        item.images?.[0] ||
+        "//product.hstatic.net/200000019872/product/mob_liquid_blitzstein_guava_menthol_salt_nic_e9d926943242491898781215f486bac0_medium.png"
+      }" 
       alt="Mob Liquid Blitzstein Guava Menthol Salt Nic (30ml)(Ổi Lạnh)">
 		</a>
 		<div class="product-tagshethang"></div>
